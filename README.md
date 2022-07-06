@@ -132,4 +132,6 @@ Sometimes you only want to rerun part of the pipeline (eg. rerun htseq and merge
 1. Navigate to the "CALL_SMK" fxn. Append the following to the end of the snakemake command in the body of "CALL_SMK"
 
 	> --allowed-rules htseq merge_htseq all
+
+2. Stanford Sherlock uses SLURM as job manager - yours may be different and require modification to the way job calls are made.
 	
