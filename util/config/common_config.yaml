@@ -1,0 +1,30 @@
+root_dir: "/oak/stanford/groups/quake/miramou/" #Change to your OAK path
+
+#These are all reference files for mapping to the human genome. 
+ref:
+    #Path to STAR index
+    index: "resources/genome_tools/human_genome/GRCh38_ensembl-ERCC/STAR_2.7.1a_DIR"
+    #gtf file with transcripts
+    annotation: "resources/genome_tools/human_genome/GRCh38_ensembl-ERCC/Homo_sapiens.GRCh38.82.ERCC.gtf"
+    #gtf file with transcripts no ERCC
+    annotation_no_ERCC: "resources/genome_tools/human_genome/GRCh38_ensembl-ERCC/Homo_sapiens.GRCh38.82.gtf"
+    annotation_introns: "resources/genome_tools/human_genome/GRCh38_ensembl-ERCC/get_intron_coords/Homo_sapiens.GRCh38.82.IntronsOnly.gtf"
+    annotation_genes: "resources/genome_tools/human_genome/GRCh38_ensembl-ERCC/Homo_sapiens.GRCh38.82.GenesOnly.gtf"
+
+genome: "resources/genome_tools/human_genome/GRCh38_ensembl-ERCC/Homo_sapiens.GRCh38.82.dna.primary_assembly.ERCC.fa"
+chrom_size_file: "resources/genome_tools/human_genome/GRCh38_ensembl-ERCC/Homo_sapiens.GRCh38.82.dna.primary_assembly.ERCC.chrom.sizes"
+
+adapter:
+    params: "2:30:10" #seed_mismatches,palindrome_clip, simple_clip
+
+#Rule parameters
+params:
+    trim: "-phred33 LEADING:3 TRAILING:3"
+    star_all: "--outFilterMultimapNmax 20 --alignSJoverhangMin 8 --alignSJDBoverhangMin 1 --outFilterMismatchNmax 999 --outFilterMismatchNoverLmax 0.04 --alignIntronMin 20 --alignIntronMax 1000000 --alignMatesGapMax 1000000 --outFilterMatchNminOverLread 0.4 --outFilterScoreMinOverLread 0.4 --outSAMmapqUnique 60 --outSAMattributes "
+    star_all_tags: "All"
+    star_2pass: "--twopassMode Basic"
+    dedup: "--REMOVE_DUPLICATES true"
+    htseq: "-f bam -m intersection-strict --secondary-alignments ignore --supplementary-alignments ignore"
+    ribo: '"GL000220.1:105424-118780"'
+    multiqc: "-dd 1 -f --ignore *._STARpass1/* -e rseqc"
+    multiqc_rseqc: "-dd 1 -f -m rseqc"

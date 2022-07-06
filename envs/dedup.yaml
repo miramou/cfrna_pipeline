@@ -1,0 +1,8 @@
+name: dedup
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.6.7
+  - openssl=1.1
+  - bioconda::gatk4=4.1.1.0=0

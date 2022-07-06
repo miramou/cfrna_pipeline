@@ -1,0 +1,2 @@
+	ribo	r2g	deg	dna
+percentile_95	0.2	49046.8	0.4	2.8

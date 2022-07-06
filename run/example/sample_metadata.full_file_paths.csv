@@ -1,0 +1,4 @@
+sample,r1,r2
+Sample_1,/oak/stanford/groups/quake/miramou/project/raw_data/blah_read1.fastq.gz,/oak/stanford/groups/quake/miramou/project/raw_data/blah_read2.fastq.gz
+Sample_2,/oak/stanford/groups/quake/miramou/project/raw_data/bloop_read1.fastq.gz,/oak/stanford/groups/quake/miramou/project/raw_data/bloop_read2.fastq.gz
+

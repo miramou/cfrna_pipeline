@@ -1,0 +1,11 @@
+#See "run/README.md" for more details
+samples: "example/sample_metadata.csv" ## Directory structure is relative to root_dir listed in util/config/common_config.yaml file
+reads: "example/raw_data" # Directory structure is relative to root_dir listed in util/config/common_config.yaml file
+data: "example/analysis/" # Directory structure is relative to root_dir listed in util/config/common_config.yaml file
+wildcard_constraints: "PE_([H2O_, \\d+]*)"
+merge_mult_lanes: "1" #0 means do not merge and 1 means do merge lane data. eg when files end with _L001_R01.fastq.gz, _L002_R01.fastq.gz
+is_two_pass: "0" #0 means run STAR 1pass. 1 means run STAR 2pass (if calling alt splicing)
+seq_type: "pe" #Options include se (single end) or pe (paired eng)
+stranded_type: "reverse" #Options include reverse, forward, or unstranded. Lib prep specific. For htseq-count
+adapters: "truseq3" #Adapter sequence to use. Accepts 3 options - truseq3, truseq2, or nextera. 
+get_reads_from_sample_sheet: 0 #0 means do not use sample sheet. 1 means do use it. See README and example sample sheets for more info.

@@ -1,0 +1,3 @@
+KeyError in line 15 of /oak/stanford/groups/quake/miramou/resources/comp_pipelines/cfRNA/cfRNA_pipeline_clean/Snakefile_modular.py:
+'call_as'
+  File "/oak/stanford/groups/quake/miramou/resources/comp_pipelines/cfRNA/cfRNA_pipeline_clean/Snakefile_modular.py", line 15, in <module>

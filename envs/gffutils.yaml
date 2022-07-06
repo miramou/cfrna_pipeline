@@ -1,0 +1,7 @@
+name: gffutils
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.6.7
+  - bioconda::gffutils=0.9

@@ -1,0 +1,14 @@
+name: trim_align_sort
+channels:
+  - conda-forge
+  - bioconda
+  - r
+dependencies:
+  - openjdk
+  - openssl=1.1
+  - r::r-essentials
+  - r::r-base
+  - bioconda::trimmomatic=0.36
+  - bioconda::star=2.7.3a   
+  - bioconda::samtools=1.10
+  - bioconda::bcftools=1.10

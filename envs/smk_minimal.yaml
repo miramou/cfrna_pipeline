@@ -1,0 +1,13 @@
+name: snakemake
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - bioconda::snakemake-minimal=5.8.1
+  - pandas=1.0.1=py37hb3f55d8_0
+  - python=3.7.4=h265db76_1
+  - numpy=1.18.1=py37h95a1406_0
+
+
+
+ 
